@@ -2,8 +2,13 @@
 #include <sqlite3.h>
 #include <string>
 #include <iostream>
-Etudiant::Etudiant():Num_insc(0),Nom(""),Prenom(""),Mail("") {}
-Etudiant::Etudiant(int num_insc,string nom, string prenom, string mail):Num_insc(num_insc),Nom(nom),Prenom(prenom),Mail(mail){}
+Etudiant::Etudiant():Num_insc(0),personne() {}
+Etudiant::Etudiant(string nom, string prenom, string mail, int num_insc): personne(),Num_insc(num_insc)
+{
+	Nom = nom;
+	Prenom = prenom;
+	Mail = mail;
+}
 
 
 void Etudiant::ajoutEtu()

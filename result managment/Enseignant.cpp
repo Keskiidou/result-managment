@@ -1,7 +1,12 @@
 #include "Enseignant.h"
 #include <sqlite3.h>
-Enseignant::Enseignant() :Nom(""), Prenom(""), Mail(""), CNRPS(0) {}
-Enseignant::Enseignant(int cnrps, string nom, string prenom, string mail ): CNRPS(cnrps), Nom(nom),Prenom(prenom),Mail(mail){}
+Enseignant::Enseignant() :personne(), CNRPS(0) {}
+Enseignant::Enseignant(int cnrps, string nom, string prenom, string mail ): CNRPS(cnrps),personne()
+{
+	Nom = nom;
+	Prenom = prenom;
+	Mail = mail;
+}
 
 void Enseignant::ajoutens()
 {

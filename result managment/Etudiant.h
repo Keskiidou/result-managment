@@ -1,15 +1,16 @@
 #pragma once
 #include <iostream>
+#include "personne.h"
 using namespace std;
-class Etudiant 
+class Etudiant :
+    public personne
+
 {
     int Num_insc;
-    string Nom;
-    string Prenom;
-    string Mail;
+ 
 public:
     Etudiant();
-    Etudiant(int,string,string,string);
+    Etudiant(string,string,string, int);
     void afficheretu();
     void ajoutEtu();
     void suppetu();

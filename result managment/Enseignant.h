@@ -1,12 +1,12 @@
 #pragma once
 #include <iostream>
+#include "personne.h"
 using namespace std;
-class Enseignant
+class Enseignant:
+    public personne
 {
     int CNRPS;
-    string Nom;
-    string Prenom;
-    string Mail;
+
 public:
     Enseignant();
     Enseignant(int, string, string, string);
