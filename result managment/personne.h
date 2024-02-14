@@ -3,10 +3,12 @@
 using namespace std;
 class personne
 {
-	int ID;
+protected:
 	string Nom;
 	string Prenom;
 	string Mail;
+private:
+	int ID;
 	
 public:
 	personne() ;
